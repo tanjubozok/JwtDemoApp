@@ -10,4 +10,10 @@
     <ProjectReference Include="..\JwtDemo.Repository\JwtDemo.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Mappings\Helpers\" />
+    <Folder Include="Mappings\AutoMapper\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
 </Project>
