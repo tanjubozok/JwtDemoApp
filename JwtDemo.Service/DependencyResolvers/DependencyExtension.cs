@@ -32,6 +32,7 @@ public static class DependencyExtension
 
         // repositories
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         services.AddScoped<IProductRepository, ProductRepository>();
 
         // services
