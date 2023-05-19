@@ -4,8 +4,9 @@ using JwtDemo.WebAPI.CustomFilters;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddScoped(typeof(ValidId<>));
+builder.Services.AddScoped(typeof(ValidIdAttribute<>));
 builder.Services.AddDependencies(builder.Configuration);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddControllers();
 builder.Services.AddFluentValidationAutoValidation();

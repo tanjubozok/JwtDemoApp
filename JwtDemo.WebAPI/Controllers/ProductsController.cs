@@ -27,7 +27,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet("{id}")]
-    [ServiceFilter(typeof(ValidId<Product>))]
+    [ServiceFilter(typeof(ValidIdAttribute<Product>))]
     public async Task<IActionResult> GetById(int id)
     {
         var data = await _productService.GetByIdAsync(id);
@@ -51,7 +51,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpDelete("{id}")]
-    [ServiceFilter(typeof(ValidId<Product>))]
+    [ServiceFilter(typeof(ValidIdAttribute<Product>))]
     public IActionResult Delete(int id)
     {
         _productService.Delete(id);

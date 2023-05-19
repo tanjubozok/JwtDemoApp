@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using FluentValidation;
+﻿using FluentValidation;
 using JwtDemo.DTOs.ProductDtos;
 using JwtDemo.Repository.Abstract;
 using JwtDemo.Repository.Context;
@@ -7,7 +6,6 @@ using JwtDemo.Repository.Repositories;
 using JwtDemo.Repository.UnitOfWorks;
 using JwtDemo.Service.Abstract;
 using JwtDemo.Service.Manager;
-using JwtDemo.Service.Mappings.Helpers;
 using JwtDemo.Service.ValidationRules.ProductValidators;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -47,15 +45,15 @@ public static class DependencyExtension
 
         #endregion
 
-        #region AutoMapper
+        #region AutoMapper        
 
-        var profiles = ProfileHelper.GetProfiles();
-        var config = new MapperConfiguration(opt =>
-        {
-            opt.AddProfiles(profiles);
-        });
-        var mapper = config.CreateMapper();
-        services.AddSingleton(mapper);
+        //var profiles = ProfileHelper.GetProfiles();
+        //var config = new MapperConfiguration(opt =>
+        //{
+        //    opt.AddProfiles(profiles);
+        //});
+        //var mapper = config.CreateMapper();
+        //services.AddSingleton(mapper);
 
         #endregion
     }

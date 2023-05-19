@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace JwtDemo.WebAPI.CustomFilters;
 
-public class ValidModel : ActionFilterAttribute
+public class ValidModelAttribute : ActionFilterAttribute
 {
     public override void OnActionExecuting(ActionExecutingContext context)
     {
