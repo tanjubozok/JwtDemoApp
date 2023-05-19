@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace JwtDemo.Service.Services
+namespace JwtDemo.Service.Abstract
 {
-    internal class ProductService
+    internal class IAppUserService
     {
     }
 }

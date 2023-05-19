@@ -18,8 +18,11 @@ public class BaseRepository<T> : IBaseRepository<T>
         _table = _databaseContext.Set<T>();
     }
 
-    public async Task Add(T entity)
-        => await _table.AddAsync(entity);
+    public async Task<T> AddAsync(T entity)
+    {
+        await _table.AddAsync(entity);
+        return entity;
+    }
 
     public void Delete(T entity)
         => _table.Remove(entity);

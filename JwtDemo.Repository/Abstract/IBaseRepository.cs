@@ -10,7 +10,7 @@ public interface IBaseRepository<T>
     Task<T?> GetOneAsync(Expression<Func<T, bool>> expression);
     Task<T?> GetByIdAsync(object id);
 
-    Task Add(T entity);
+    Task<T> AddAsync(T entity);
     void Update(T entity);
     void Delete(T entity);
 }
