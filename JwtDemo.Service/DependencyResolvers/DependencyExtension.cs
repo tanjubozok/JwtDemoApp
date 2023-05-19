@@ -35,6 +35,7 @@ public static class DependencyExtension
 
         // services
         services.AddScoped<IProductService, ProductManager>();
+        services.AddScoped<IJwtService, JwtManager>();
 
         #endregion
 
